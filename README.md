@@ -1,8 +1,7 @@
  <div align="center">
- <img align="center" width="180" src="https://franciscohodge.com/project-pages/js-library-boilerplate/images/JSLB2.png" />
   <h2>React Loading Screen</h2>
   <blockquote>A simple full-screen loading component for React</blockquote>
-  <a href="https://travis-ci.org/hodgef/js-library-boilerplate"><img src="https://travis-ci.org/hodgef/js-library-boilerplate.svg?branch=master" /></a> <img src="https://img.shields.io/david/hodgef/js-library-boilerplate.svg" /> <a href="https://david-dm.org/hodgef/js-library-boilerplate?type=dev"><img src="https://img.shields.io/david/dev/hodgef/js-library-boilerplate.svg" /></a> <img src="https://api.dependabot.com/badges/status?host=github&repo=hodgef/js-library-boilerplate" />
+
 
 </div>
 
@@ -27,3 +26,27 @@ import 'react-loading-screen/build/index.css';
 <script src="build/index.js"></script>
 ...
 ```
+
+### Props
+
+| Name          | type           | default       |
+| ------------- |:--------------:| -------------:|
+| loading       | bool           | false         |
+| background    | string         | "#ffffff"     |
+| colour        | string         | "#000000"     |
+| type          | string         | "square-flip" |
+
+### Loader types
+
+| Name            |
+| ----------------|
+| square-flip     |
+| double-pulse    |
+| wave            |
+| wandering-cubes |
+| pulse           |
+| chasing-dots    |
+| three-bounce    |
+| circle          |
+| cube-grid       |
+
