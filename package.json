@@ -1,6 +1,6 @@
 {
   "name": "@lukewalker1996/react-loading-screen",
-  "version": "2.0.8",
+  "version": "2.0.9",
   "main": "build/index.js",
   "scripts": {
     "start": "node scripts/start.js",
