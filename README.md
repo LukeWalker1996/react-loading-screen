@@ -10,7 +10,7 @@
 ## 📦 Getting Started
 
 ```
-npm i react-loading-screen --s
+npm i @lukewalker1996/react-loading-screen --s
 ```
 
 ### npm
@@ -107,4 +107,5 @@ Example of evaluating at render..
 | three-bounce    |
 | circle          |
 | cube-grid       |
+| fading-circle   |
 

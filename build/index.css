@@ -1,6 +1,6 @@
 /*!
  * 
- *   @lukewalker1996/react-loading-screen v2.0.7
+ *   @lukewalker1996/react-loading-screen v2.0.8
  *   https://github.com/lukewalker1996/react-loading-screen
  * 
  *   Copyright (c) Luke Walker (https://github.com/lukewalker1996)

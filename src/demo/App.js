@@ -1,71 +1,77 @@
-import './css/App.css';
-import Lib from './../lib';
-import React, { Component, ReactDOM } from 'react';
-import { SquareFlip, DoublePulse, Wave} from './loaders';
+import "./css/App.css";
+import Lib from "./../lib";
+import React, { Component } from "react";
+import {
+  SquareFlip,
+  DoublePulse,
+  Wave,
+  WanderingCubes,
+  Pulse,
+  ChasingDots,
+  ThreeBounce,
+  Circle,
+  CubeGrid,
+  FadingCircle
+} from "./loaders";
 
-class App extends Component {
-  constructor(props){
+class LoadingScreen extends Component {
+  constructor(props) {
     super(props);
     let libInstance = new Lib();
-    console.log("Demo loaded!", libInstance);
-    this.demoArrowMethod();
   }
-
-  demoArrowMethod = () => {
-    console.log("Arrow methods will workkkkk");
-  }
-
-  componentDidMount(){
-
-  }
-
   renderSpinner = (type, colour) => {
-    let loader = null;
-    switch(type){
+    switch (type) {
       case "square-flip":
-          loader = <SquareFlip colour={colour} />
-          break;
+        return <SquareFlip colour={colour} />;
       case "double-pulse":
-          loader = <DoublePulse colour={colour} />
-          break;
+        return <DoublePulse colour={colour} />;
       case "wave":
-          loader = <Wave colour={colour} />
-          break;
+        return <Wave colour={colour} />;
       case "wandering-cubes":
-          break;
+        return <WanderingCubes colour={colour} />;
       case "pulse":
-          break;
+        return <Pulse colour={colour} />;
       case "chasing-dots":
-          break;
+        return <ChasingDots colour={colour} />;
       case "three-bounce":
-          break;
+        return <ThreeBounce colour={colour} />;
       case "circle":
-          break;
+        return <Circle colour={colour} />;
       case "cube-grid":
-          break;
+        return <CubeGrid colour={colour} />;
       case "fading-circle":
-          break;
+        return <FadingCircle colour={colour} />;
+      default:
+        return null;
+    }
+  };
+
+  render() {
+    const loading = true,
+      background = "#e3e3e3",
+      type = "fading-circle",
+      loadingText = null,
+      colour = "red";
+
+    // const { loading, background, colour, type } = this.props;
+
+    if (loading == null) {
+      return null;
     }
 
-    return loader;
-  }
-
-  render(){
-
-    //const { loading, background, loader } = this.props;
-    const loading = true,
-    background = '#e3e3e3',
-    loader = "wave",
-    loadingText = null,
-    colour = 'red';
-
     return loading ? (
-      <div style={{background: background != null ? background : '#ffffff'}} className="rls-fullscreen">
-        {this.renderSpinner(loader, colour)}
-        {loadingText != null ? loadingText : null}
+      <div
+        style={{ background: background != null ? background : "#ffffff" }}
+        className="rls-fullscreen"
+      >
+        {this.renderSpinner(
+          type == null ? "square-flip" : type,
+          colour == null ? "#000000" : colour
+        )}
+        {/* {loadingText != null ? loadingText : null} */}
       </div>
-    ) : null
+    ) : null;
   }
 }
 
-export default App;
+export default LoadingScreen;
